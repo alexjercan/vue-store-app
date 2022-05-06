@@ -12,3 +12,11 @@ export interface Product {
   category: string;
   rating: Rating;
 }
+
+export type TSort = 'desc' | 'asc';
+
+export interface Options {
+  sort?: TSort;
+  limit?: number;
+  category?: string;
+}
