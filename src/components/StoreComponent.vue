@@ -31,7 +31,6 @@ const productsState = reactive<ProductState>({
 });
 
 async function getProducts() {
-  console.log(categoryRef.value);
   try {
     productsState.loading = true;
     productsState.error = "";
