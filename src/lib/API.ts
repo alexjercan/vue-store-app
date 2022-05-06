@@ -36,5 +36,5 @@ export default {
     const response = await fetch(url);
 
     return response.json() as Promise<string[]>;
-  }
+  },
 };

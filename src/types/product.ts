@@ -13,7 +13,7 @@ export interface Product {
   rating: Rating;
 }
 
-export type TSort = 'desc' | 'asc';
+export type TSort = "desc" | "asc";
 
 export interface Options {
   sort?: TSort;

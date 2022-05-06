@@ -36,7 +36,10 @@ async function getProducts() {
     productsState.error = "";
     productsState.products = [];
 
-    productsState.products = await API.getProducts({ sort: sortRef.value, category: categoryRef.value });
+    productsState.products = await API.getProducts({
+      sort: sortRef.value,
+      category: categoryRef.value,
+    });
   } catch (error) {
     productsState.error = error as string;
   } finally {
@@ -58,9 +61,10 @@ async function getCategories() {
   }
 }
 
-watch(() => [sortRef.value, categoryRef.value], getProducts, { immediate: true });
+watch(() => [sortRef.value, categoryRef.value], getProducts, {
+  immediate: true,
+});
 watch(() => [], getCategories, { immediate: true });
-
 </script>
 
 <template>

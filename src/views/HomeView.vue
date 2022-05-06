@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Store from "@/components/Store.vue";
+import Store from "@/components/StoreComponent.vue";
 </script>
 
 <template>
-    <Store />
+  <Store />
 </template>
