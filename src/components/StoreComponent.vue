@@ -31,6 +31,7 @@ const productsState = reactive<ProductState>({
 });
 
 async function getProducts() {
+  console.log(categoryRef.value);
   try {
     productsState.loading = true;
     productsState.error = "";
@@ -82,6 +83,17 @@ watch(() => [], getCategories, { immediate: true });
               v-model="categoryRef"
             />
             <span>{{ category }}</span>
+          </label>
+        </p>
+        <p>
+          <label>
+            <input
+              name="group1"
+              type="radio"
+              :value="undefined"
+              v-model="categoryRef"
+            />
+            <span>All</span>
           </label>
         </p>
       </div>
